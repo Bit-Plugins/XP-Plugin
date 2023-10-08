@@ -1,5 +1,4 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, Message, ButtonStyle, SlashCommandBuilder } = require('discord.js')
-const { commandMetrics } = require('../functions.js')
 const { embedColours, botIDs } = require('../config');
 const SQLite = require("better-sqlite3");
 const sql = new SQLite('./xp.sqlite');
