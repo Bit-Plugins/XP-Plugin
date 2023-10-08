@@ -68,7 +68,7 @@ module.exports = {
                     .setDescription(locale.xp.levelUp.replace('{username}', message.author.displayName).replace('{points}', nFormatter(score.points, 2)).replace('{level}', nFormatter(score.level, 0)))
                     .setColour(embedColours.positive)
                     .setTimestamp()
-                message.channel.send({ embeds: [embed] })
+                message.reply({ embeds: [embed] })
             } else {
                 client.setScore.run(score);
             }
