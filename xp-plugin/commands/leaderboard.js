@@ -1,7 +1,7 @@
 const { EmbedBuilder, ActionRowBuilder, ButtonBuilder, Message, ButtonStyle, SlashCommandBuilder } = require('discord.js')
 const { embedColours, botIDs } = require('../config');
 const SQLite = require("better-sqlite3");
-const sql = new SQLite('./xp.sqlite');
+const sql = new SQLite('./plugins/xp-plugin/xp.sqlite');
 const locale = require('../locale/en.json')
 
 module.exports = {
@@ -95,7 +95,7 @@ module.exports = {
 			for(const data of top5) {
 				let user = interaction.guild.members.cache.get(data.user)	
 
-                embed.addFields({ name: i.toString()+')', type: locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
+                embed.addFields({ name: '\u200B', value: i.toString()+') '+locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
 				i++
 			}
 		}
@@ -107,7 +107,7 @@ module.exports = {
 			for(const data of top10) {
 				let user = interaction.guild.members.cache.get(data.user)
 	
-				embed.addFields({ name: i.toString()+')', type: locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
+				embed.addFields({ name: '\u200B', value: i.toString()+') '+locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
 
 				i++
 			}
@@ -119,7 +119,7 @@ module.exports = {
 
 			for(const data of top15) {
 				let user = interaction.guild.members.cache.get(data.user)
-				embed.addFields({ name: i.toString()+')', type: locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
+				embed.addFields({ name: '\u200B', value: i.toString()+') '+locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
 
 				i++
 			}
@@ -132,7 +132,7 @@ module.exports = {
 			for(const data of top20) {
 				let user = interaction.guild.members.cache.get(data.user)
 
-				embed.addFields({ name: i.toString()+')', type: locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
+				embed.addFields({ name: '\u200B', value: i.toString()+') '+locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
 
 				i++
 			}
@@ -144,7 +144,7 @@ module.exports = {
 
 			for(const data of top25) {
 				let user = interaction.guild.members.cache.get(data.user)
-				embed.addFields({ name: i.toString()+')', type: locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
+				embed.addFields({ name: '\u200B', value: i.toString()+') '+locale.xp.leaderboardFields.replace('{username}', data.user).replace('{points}', nFormatter(data.points, 2)).replace('{level}', nFormatter(data.level, 0)) })
 
 				i++
 			}

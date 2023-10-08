@@ -8,7 +8,7 @@
     "xp": {
         "points": "points",
         "levelUp": "🎉🎉 Congratulations **{username}**, youve earnt a total of **{points}**, which is enough for **Level {level}** 🎉🎉",
-        "leaderboardFields": "**{username}** with over **{points} XP** and at **Level {level}**",
+        "leaderboardFields": "**<@{username}>** with over **{points} XP** and at **Level {level}**",
         "leaderboardTitle": "Top {leaderboardType}",
         "leaderboardDescription": "Our top {leaderboardType} points leaders!"
     }

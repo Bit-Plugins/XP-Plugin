@@ -1,12 +1,13 @@
 const { Events } = require('discord.js');
-const { botIDs, embedColours } = require('./config')
+const { botIDs, embedColours } = require('../config')
 const locale = require('../locale/en.json')
 const SQLite = require("better-sqlite3");
-const sql = new SQLite('./xp.sqlite');
+const sql = new SQLite('./plugins/xp-plugin/xp.sqlite');
 
 module.exports = {
     name: Events.MessageCreate,
     async execute(message) {
+        const client = message.client
         client.getScore = sql.prepare("SELECT * FROM scores WHERE user = ? AND guild = ?");
         client.setScore = sql.prepare("INSERT OR REPLACE INTO scores (id, user, guild, points, level) VALUES (@id, @user, @guild, @points, @level);");
 
