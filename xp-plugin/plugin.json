@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "bitVersion": "5.x.x",
     "support": "https://github.com/Lockyz-Dev/bit-core/issues",
-    "updateURL": "https://cdn.lockyzdev.net/bit/plugins/example/update.json",
+    "updateURL": "https://cdn.lockyzdev.net/bit/plugins/xp/update.json",
     "events": "true",
     "commands": "true"
 }
