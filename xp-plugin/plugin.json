@@ -2,7 +2,9 @@
     "name": "XP System",
     "developer": "Robin Painter",
     "version": "1.0.0",
-    "support": "https://github.com/Bit-Plugins/XP-Plugin/issues",
+    "bitVersion": "5.x.x",
+    "support": "https://github.com/Lockyz-Dev/bit-core/issues",
+    "updateURL": "https://cdn.lockyzdev.net/bit/plugins/example/update.json",
     "events": "true",
     "commands": "true"
 }
